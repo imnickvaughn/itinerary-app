@@ -1,0 +1,29 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
+.top-nav-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $mobile-content-padding;
+  width: 100%;
+
+  &__heading {
+    @extend .heading-2;
+    margin: 0;
+  }
+
+  &__discard {
+    @extend .body-small;
+    background: none;
+    border: none;
+    color: $text-primary;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+

@@ -1,0 +1,54 @@
+<div class="member-details">
+  <app-notification-bar></app-notification-bar>
+  
+  <div class="member-details__header">
+    <app-progress-bar [progress]="60" [width]="103"></app-progress-bar>
+    <app-top-nav-title title="Member Details" (discardClick)="onDiscard()"></app-top-nav-title>
+  </div>
+
+  <div class="member-details__content">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="member-details__section">
+        <app-location-input
+          formControlName="name"
+          label="Name"
+          placeholder="Enter name"
+        ></app-location-input>
+      </div>
+
+      <div class="member-details__section">
+        <app-location-input
+          formControlName="email"
+          label="Email"
+          placeholder="Enter email"
+        ></app-location-input>
+      </div>
+
+      <div class="member-details__section">
+        <app-location-input
+          formControlName="phone"
+          label="Phone"
+          placeholder="Enter phone"
+        ></app-location-input>
+      </div>
+
+      <div class="member-details__section">
+        <h3 class="member-details__section-title" i18n="@@member.peopleAndPreferences">People and Preferences</h3>
+        <app-preference-selector [selectedPreferences]="selectedPreferences"></app-preference-selector>
+      </div>
+
+      <div class="member-details__section">
+        <div class="member-details__setting-item">
+          <div class="member-details__setting-content">
+            <span class="member-details__setting-title" i18n="@@member.anotherSetting">Another Setting</span>
+            <span class="member-details__setting-description" i18n="@@member.loremIpsum">Lorem Ipsum</span>
+          </div>
+          <app-radio-button [checked]="true" name="member-setting"></app-radio-button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <app-bottom-bar></app-bottom-bar>
+</div>
+

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "trans1",
+    "type": "car",
+    "name": "Car",
+    "icon": "🚗"
+  },
+  {
+    "id": "trans2",
+    "type": "walking",
+    "name": "Walking",
+    "icon": "🚶"
+  },
+  {
+    "id": "trans3",
+    "type": "public_transport",
+    "name": "Public Transport",
+    "icon": "🚌"
+  },
+  {
+    "id": "trans4",
+    "type": "bike",
+    "name": "Bike",
+    "icon": "🚲"
+  }
+]
+

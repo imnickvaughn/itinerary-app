@@ -1,0 +1,34 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+@import '../../../styles/mixins';
+
+.date-time-picker {
+  width: 100%;
+  margin-bottom: $spacing-md;
+
+  &__label {
+    @extend .body-small;
+    display: block;
+    margin-bottom: $spacing-xs;
+    color: $text-primary;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__field {
+    @include input-field;
+    flex: 1;
+    padding-right: 40px;
+  }
+
+  &__icon {
+    position: absolute;
+    right: $spacing-md;
+    pointer-events: none;
+  }
+}
+

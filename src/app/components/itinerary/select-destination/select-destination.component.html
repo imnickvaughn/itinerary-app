@@ -1,0 +1,20 @@
+<div class="select-destination">
+  <app-notification-bar></app-notification-bar>
+  
+  <div class="select-destination__header">
+    <app-progress-bar [progress]="40" [width]="103"></app-progress-bar>
+    <app-top-nav-title title="Select Destination" (discardClick)="onDiscard()"></app-top-nav-title>
+  </div>
+
+  <div class="select-destination__content">
+    <div class="select-destination__map">
+      <!-- Map component would go here -->
+      <div class="select-destination__map-placeholder">
+        <span i18n="@@itinerary.map">Map</span>
+      </div>
+    </div>
+  </div>
+
+  <app-bottom-bar></app-bottom-bar>
+</div>
+

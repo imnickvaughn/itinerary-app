@@ -1,0 +1,44 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
+.transport-selector {
+  width: 100%;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-xs;
+    padding: $spacing-sm;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-md;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 60px;
+
+    &:hover {
+      border-color: $primary-color;
+    }
+
+    &--selected {
+      background-color: $primary-color;
+      color: $secondary-color;
+      border-color: $primary-color;
+    }
+  }
+
+  &__icon {
+    font-size: 24px;
+  }
+
+  &__name {
+    @extend .caption-medium;
+  }
+}
+

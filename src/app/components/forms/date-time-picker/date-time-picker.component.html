@@ -1,0 +1,13 @@
+<div class="date-time-picker">
+  <label class="date-time-picker__label" *ngIf="label">{{ label }}</label>
+  <div class="date-time-picker__wrapper">
+    <input
+      type="datetime-local"
+      [formControl]="control"
+      [placeholder]="placeholder"
+      class="date-time-picker__field"
+    />
+    <span class="date-time-picker__icon">🕐</span>
+  </div>
+</div>
+

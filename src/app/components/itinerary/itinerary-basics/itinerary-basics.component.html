@@ -1,0 +1,59 @@
+<div class="itinerary-basics">
+  <app-notification-bar></app-notification-bar>
+  
+  <div class="itinerary-basics__header">
+    <app-progress-bar [progress]="50" [width]="103"></app-progress-bar>
+    <app-top-nav-title title="Itinerary Basics" (discardClick)="onDiscard()"></app-top-nav-title>
+  </div>
+
+  <div class="itinerary-basics__content">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="itinerary-basics__section">
+        <app-location-input
+          formControlName="title"
+          label="Itinerary title"
+          placeholder="Enter itinerary title"
+        ></app-location-input>
+      </div>
+
+      <div class="itinerary-basics__section">
+        <div class="itinerary-basics__tabs">
+          <button
+            type="button"
+            class="itinerary-basics__tab"
+            [class.itinerary-basics__tab--active]="activeTab === 'details'"
+            (click)="setActiveTab('details')"
+            i18n="@@itinerary.details"
+          >
+            Details
+          </button>
+          <button
+            type="button"
+            class="itinerary-basics__tab"
+            [class.itinerary-basics__tab--active]="activeTab === 'map'"
+            (click)="setActiveTab('map')"
+            i18n="@@itinerary.map"
+          >
+            Map
+          </button>
+        </div>
+        <div class="itinerary-basics__tab-indicator" [style.left.px]="activeTab === 'details' ? 0 : 111"></div>
+      </div>
+
+      <div class="itinerary-basics__section" *ngIf="activeTab === 'details'">
+        <div class="itinerary-basics__place-info">
+          <span class="itinerary-basics__place-count" i18n="@@itinerary.places">4 places</span>
+          <span class="itinerary-basics__place-duration" i18n="@@itinerary.duration">3 hrs 30 min (11.2 km)</span>
+        </div>
+        <!-- Place list would go here -->
+      </div>
+    </form>
+  </div>
+
+  <div class="itinerary-basics__footer">
+    <button type="button" class="itinerary-basics__button" i18n="@@common.next">Next</button>
+  </div>
+
+  <app-bottom-bar></app-bottom-bar>
+</div>
+

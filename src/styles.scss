@@ -1,0 +1,20 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Gilroy:wght@400;500;700&family=Calistoga&display=swap');
+
+@import './app/styles/variables';
+@import './app/styles/typography';
+@import './app/styles/mixins';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $background-color;
+  color: $text-primary;
+}

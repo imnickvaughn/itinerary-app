@@ -1,0 +1,78 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+@import '../../../styles/mixins';
+
+.origin-screen {
+  @include mobile-container;
+  min-height: 100vh;
+  background-color: $background-color;
+  padding-bottom: 100px; // Space for bottom bar
+
+  &__header {
+    padding: $spacing-md 0;
+  }
+
+  &__content {
+    padding: $spacing-md $mobile-content-padding;
+  }
+
+  &__section {
+    margin-bottom: $spacing-xl;
+    padding-bottom: $spacing-lg;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__section-title {
+    @extend .heading-2;
+    margin-bottom: $spacing-md;
+  }
+
+  &__time-group {
+    display: flex;
+    gap: $spacing-md;
+    
+    > * {
+      flex: 1;
+    }
+  }
+
+  &__preference-match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__preference-label {
+    @extend .heading-2;
+  }
+
+  &__preference-value {
+    @extend .heading-2;
+  }
+
+  &__setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing-md 0;
+  }
+
+  &__setting-content {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__setting-title {
+    @extend .body-small;
+  }
+
+  &__setting-description {
+    @extend .caption;
+  }
+}
+

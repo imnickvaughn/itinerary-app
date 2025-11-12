@@ -1,0 +1,14 @@
+<div class="preference-selector">
+  <div class="preference-selector__list">
+    <div
+      *ngFor="let preference of preferences"
+      class="preference-selector__item"
+      [class.preference-selector__item--selected]="isSelected(preference.id)"
+      (click)="togglePreference(preference.id)"
+    >
+      <span class="preference-selector__icon">{{ preference.icon }}</span>
+      <span class="preference-selector__name">{{ preference.name }}</span>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "loc1",
+    "name": "Marylebone",
+    "address": "456 Barlton Road",
+    "latitude": 51.5200,
+    "longitude": -0.1550,
+    "city": "London",
+    "country": "UK"
+  },
+  {
+    "id": "loc2",
+    "name": "Shan-ul-haq haqee road",
+    "address": "Shan-ul-haq haqee road",
+    "latitude": 24.8607,
+    "longitude": 67.0011,
+    "city": "Karachi",
+    "country": "Pakistan"
+  },
+  {
+    "id": "loc3",
+    "name": "Kabul tikka",
+    "address": "Kabul tikka restaurant",
+    "latitude": 24.8600,
+    "longitude": 67.0020,
+    "city": "Karachi",
+    "country": "Pakistan"
+  }
+]
+

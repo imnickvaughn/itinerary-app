@@ -1,0 +1,33 @@
+[
+  {
+    "id": "pref1",
+    "name": "Sushi",
+    "type": "food",
+    "icon": "🍣"
+  },
+  {
+    "id": "pref2",
+    "name": "Boston Cream Pie",
+    "type": "food",
+    "icon": "🥧"
+  },
+  {
+    "id": "pref3",
+    "name": "Afghan cuisine",
+    "type": "food",
+    "icon": "🍛"
+  },
+  {
+    "id": "pref4",
+    "name": "Italian",
+    "type": "food",
+    "icon": "🍝"
+  },
+  {
+    "id": "pref5",
+    "name": "Mexican",
+    "type": "food",
+    "icon": "🌮"
+  }
+]
+

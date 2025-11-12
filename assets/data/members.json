@@ -1,0 +1,19 @@
+[
+  {
+    "id": "member1",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+1234567890",
+    "preferences": ["pref1", "pref3"],
+    "avatar": ""
+  },
+  {
+    "id": "member2",
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "phone": "+1234567891",
+    "preferences": ["pref2", "pref4"],
+    "avatar": ""
+  }
+]
+

@@ -1,0 +1,46 @@
+@import '../../../styles/variables';
+
+.radio-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__checkmark {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+    background-color: $secondary-color;
+    position: relative;
+    transition: all 0.2s ease;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $primary-color;
+    }
+
+    &--checked {
+      border-color: $primary-color;
+
+      &::after {
+        display: block;
+      }
+    }
+  }
+}
+

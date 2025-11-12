@@ -1,0 +1,17 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+
+.notification-bar {
+  width: 100%;
+  height: 41px;
+  background-color: $secondary-color;
+  display: flex;
+  align-items: center;
+  padding: 0 $mobile-content-padding;
+
+  &__content {
+    @extend .body-small;
+    color: $text-secondary;
+  }
+}
+

@@ -1,0 +1,12 @@
+<div class="location-input">
+  <label class="location-input__label" *ngIf="label">{{ label }}</label>
+  <div class="location-input__wrapper">
+    <input
+      type="text"
+      [formControl]="control"
+      [placeholder]="placeholder"
+      class="location-input__field"
+    />
+  </div>
+</div>
+

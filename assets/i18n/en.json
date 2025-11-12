@@ -1,0 +1,71 @@
+{
+  "common": {
+    "discard": "Discard?",
+    "settings": "Settings",
+    "save": "Save",
+    "cancel": "Cancel",
+    "next": "Next",
+    "back": "Back",
+    "start": "Start",
+    "end": "End"
+  },
+  "origin": {
+    "title": "Origin",
+    "startingLocation": "Starting location",
+    "endingLocation": "Ending location",
+    "draw": "Draw"
+  },
+  "itinerary": {
+    "title": "Itinerary title",
+    "placeSelection": "Place Selection",
+    "details": "Details",
+    "map": "Map",
+    "places": "places",
+    "hrs": "hrs",
+    "min": "min",
+    "km": "km"
+  },
+  "member": {
+    "title": "Member Details",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "preferences": "Preferences",
+    "peopleAndPreferences": "People and Preferences",
+    "anotherSetting": "Another Setting",
+    "loremIpsum": "Lorem Ipsum"
+  },
+  "members": {
+    "title": "Members",
+    "addMember": "Add Member",
+    "lookingFor": "looking for"
+  },
+  "place": {
+    "title": "Add Place Details",
+    "basicInfo": "Basic Info",
+    "dateAndTime": "Date and Time",
+    "name": "Place Name",
+    "description": "Description",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "date": "Date",
+    "transport": "Transport"
+  },
+  "preference": {
+    "title": "Preference Match",
+    "match": "Preference Match"
+  },
+  "transport": {
+    "car": "car",
+    "walking": "Walking",
+    "publicTransport": "Public Transport",
+    "bike": "Bike"
+  },
+  "notification": {
+    "status": "Status"
+  },
+  "progress": {
+    "step": "Step"
+  }
+}
+

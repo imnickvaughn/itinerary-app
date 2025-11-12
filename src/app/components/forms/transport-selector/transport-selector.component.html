@@ -1,0 +1,14 @@
+<div class="transport-selector">
+  <div class="transport-selector__list">
+    <div
+      *ngFor="let option of transportOptions"
+      class="transport-selector__item"
+      [class.transport-selector__item--selected]="isSelected(option.type)"
+      (click)="selectTransport(option.type)"
+    >
+      <span class="transport-selector__icon">{{ option.icon }}</span>
+      <span class="transport-selector__name">{{ option.name }}</span>
+    </div>
+  </div>
+</div>
+

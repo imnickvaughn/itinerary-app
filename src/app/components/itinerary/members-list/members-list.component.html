@@ -1,0 +1,39 @@
+<div class="members-list">
+  <app-notification-bar></app-notification-bar>
+  
+  <div class="members-list__header">
+    <app-progress-bar [progress]="70" [width]="103"></app-progress-bar>
+    <app-top-nav-title title="Members" (discardClick)="onDiscard()"></app-top-nav-title>
+  </div>
+
+  <div class="members-list__content">
+    <div class="members-list__search">
+      <input
+        type="text"
+        class="members-list__search-input"
+        placeholder="looking for"
+        i18n-placeholder="@@members.lookingFor"
+      />
+    </div>
+
+    <div class="members-list__list">
+      <div *ngFor="let member of members" class="members-list__item">
+        <div class="members-list__avatar">
+          <span>{{ member.name.charAt(0) }}</span>
+        </div>
+        <div class="members-list__info">
+          <span class="members-list__name">{{ member.name }}</span>
+          <span class="members-list__email">{{ member.email }}</span>
+        </div>
+        <button class="members-list__action">+</button>
+      </div>
+    </div>
+
+    <button class="members-list__add-button" (click)="addMember()" i18n="@@members.addMember">
+      Add Member
+    </button>
+  </div>
+
+  <app-bottom-bar></app-bottom-bar>
+</div>
+

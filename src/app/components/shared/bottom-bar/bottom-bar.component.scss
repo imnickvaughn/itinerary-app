@@ -1,0 +1,23 @@
+@import '../../../styles/variables';
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: $mobile-container-width;
+  height: 75px;
+  background-color: $secondary-color;
+  border-top: 1px solid $border-color;
+  margin: 0 auto;
+
+  &__nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 $mobile-content-padding;
+  }
+}
+

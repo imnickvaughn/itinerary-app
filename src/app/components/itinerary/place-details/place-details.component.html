@@ -1,0 +1,83 @@
+<div class="place-details">
+  <app-notification-bar></app-notification-bar>
+  
+  <div class="place-details__header">
+    <app-progress-bar [progress]="80" [width]="103"></app-progress-bar>
+    <app-top-nav-title title="Add Place Details" (discardClick)="onDiscard()"></app-top-nav-title>
+  </div>
+
+  <div class="place-details__content">
+    <div class="place-details__tabs">
+      <button
+        type="button"
+        class="place-details__tab"
+        [class.place-details__tab--active]="activeTab === 'basic'"
+        (click)="setActiveTab('basic')"
+        i18n="@@place.basicInfo"
+      >
+        Basic Info
+      </button>
+      <button
+        type="button"
+        class="place-details__tab"
+        [class.place-details__tab--active]="activeTab === 'datetime'"
+        (click)="setActiveTab('datetime')"
+        i18n="@@place.dateAndTime"
+      >
+        Date and Time
+      </button>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="place-details__section" *ngIf="activeTab === 'basic'">
+        <app-location-input
+          formControlName="name"
+          label="Place Name"
+          placeholder="Enter place name"
+        ></app-location-input>
+        
+        <app-location-input
+          formControlName="description"
+          label="Description"
+          placeholder="Enter description"
+        ></app-location-input>
+        
+        <app-location-input
+          formControlName="location"
+          label="Location"
+          placeholder="Enter location"
+        ></app-location-input>
+      </div>
+
+      <div class="place-details__section" *ngIf="activeTab === 'datetime'">
+        <app-date-time-picker
+          formControlName="date"
+          label="Date"
+          placeholder="Select date"
+        ></app-date-time-picker>
+        
+        <app-date-time-picker
+          formControlName="startTime"
+          label="Start Time"
+          placeholder="Select start time"
+        ></app-date-time-picker>
+        
+        <app-date-time-picker
+          formControlName="endTime"
+          label="End Time"
+          placeholder="Select end time"
+        ></app-date-time-picker>
+        
+        <div class="place-details__transport">
+          <h3 class="place-details__section-title" i18n="@@place.transport">Transport</h3>
+          <app-transport-selector
+            [selectedTransport]="form.get('transportType')?.value"
+          ></app-transport-selector>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <app-bottom-bar></app-bottom-bar>
+</div>
+

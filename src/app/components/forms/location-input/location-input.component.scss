@@ -1,0 +1,25 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+@import '../../../styles/mixins';
+
+.location-input {
+  width: 100%;
+  margin-bottom: $spacing-md;
+
+  &__label {
+    @extend .body-small;
+    display: block;
+    margin-bottom: $spacing-xs;
+    color: $text-primary;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__field {
+    @include input-field;
+    width: 100%;
+  }
+}
+

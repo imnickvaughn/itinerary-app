@@ -1,0 +1,75 @@
+@import '../../../styles/variables';
+@import '../../../styles/typography';
+@import '../../../styles/mixins';
+
+.itinerary-basics {
+  @include mobile-container;
+  min-height: 100vh;
+  background-color: $background-color;
+  padding-bottom: 100px;
+
+  &__header {
+    padding: $spacing-md 0;
+  }
+
+  &__content {
+    padding: $spacing-md $mobile-content-padding;
+  }
+
+  &__section {
+    margin-bottom: $spacing-xl;
+  }
+
+  &__tabs {
+    display: flex;
+    position: relative;
+    border-bottom: 2px solid $border-color;
+  }
+
+  &__tab {
+    @extend .body-medium;
+    padding: $spacing-sm $spacing-md;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $text-secondary;
+    position: relative;
+
+    &--active {
+      color: $text-primary;
+    }
+  }
+
+  &__tab-indicator {
+    position: absolute;
+    bottom: -2px;
+    width: 42px;
+    height: 4px;
+    background-color: $primary-color;
+    transition: left 0.3s ease;
+  }
+
+  &__place-info {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-md 0;
+  }
+
+  &__place-count {
+    @extend .body-small;
+  }
+
+  &__place-duration {
+    @extend .caption-medium;
+  }
+
+  &__footer {
+    padding: $spacing-lg $mobile-content-padding;
+  }
+
+  &__button {
+    @include button-primary;
+  }
+}
+

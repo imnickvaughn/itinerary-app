@@ -1,0 +1,76 @@
+<div class="origin-screen">
+  <app-notification-bar></app-notification-bar>
+  
+  <div class="origin-screen__header">
+    <app-progress-bar [progress]="25" [width]="103"></app-progress-bar>
+    <app-top-nav-title title="Origin" (discardClick)="onDiscard()"></app-top-nav-title>
+  </div>
+
+  <div class="origin-screen__content">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="origin-screen__section">
+        <app-location-input
+          formControlName="startingLocation"
+          label="Starting location"
+          placeholder="Enter starting location"
+        ></app-location-input>
+      </div>
+
+      <div class="origin-screen__section">
+        <app-location-input
+          formControlName="endingLocation"
+          label="Ending location"
+          placeholder="Enter ending location"
+        ></app-location-input>
+      </div>
+
+      <div class="origin-screen__section">
+        <div class="origin-screen__time-group">
+          <app-date-time-picker
+            formControlName="startTime"
+            label="Start"
+            placeholder="Start time"
+          ></app-date-time-picker>
+          <app-date-time-picker
+            formControlName="endTime"
+            label="End"
+            placeholder="End time"
+          ></app-date-time-picker>
+        </div>
+      </div>
+
+      <div class="origin-screen__section">
+        <h3 class="origin-screen__section-title" i18n="@@origin.transport">Transport</h3>
+        <app-transport-selector
+          [selectedTransport]="form.get('transportType')?.value"
+        ></app-transport-selector>
+      </div>
+
+      <div class="origin-screen__section">
+        <h3 class="origin-screen__section-title" i18n="@@member.peopleAndPreferences">People and Preferences</h3>
+        <app-preference-selector></app-preference-selector>
+      </div>
+
+      <div class="origin-screen__section">
+        <div class="origin-screen__preference-match">
+          <span class="origin-screen__preference-label" i18n="@@preference.match">Preference Match</span>
+          <span class="origin-screen__preference-value">{{ preferenceMatch }}%</span>
+        </div>
+      </div>
+
+      <div class="origin-screen__section">
+        <h3 class="origin-screen__section-title" i18n="@@common.settings">Settings</h3>
+        <div class="origin-screen__setting-item">
+          <div class="origin-screen__setting-content">
+            <span class="origin-screen__setting-title" i18n="@@member.anotherSetting">Another Setting</span>
+            <span class="origin-screen__setting-description" i18n="@@member.loremIpsum">Lorem Ipsum</span>
+          </div>
+          <app-radio-button [checked]="true" name="setting"></app-radio-button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <app-bottom-bar></app-bottom-bar>
+</div>
+

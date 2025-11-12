@@ -1,0 +1,87 @@
+// Typography System - Only Gilroy and Calistoga fonts
+
+// Font Families
+$font-primary: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$font-secondary: 'Calistoga', serif;
+
+// Heading 1 - Screen titles
+.heading-1 {
+  font-family: $font-primary;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $text-primary;
+}
+
+// Heading 2 - Section headers
+.heading-2 {
+  font-family: $font-primary;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $text-primary;
+}
+
+// Body Large - Primary text
+.body-large {
+  font-family: $font-primary;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $text-primary;
+}
+
+// Body Medium - Secondary text
+.body-medium {
+  font-family: $font-primary;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $text-primary;
+}
+
+// Body Small - Labels
+.body-small {
+  font-family: $font-primary;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $text-primary;
+}
+
+// Caption - Helper text
+.caption {
+  font-family: $font-primary;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $text-caption;
+}
+
+// Caption Medium - Slightly larger helper text
+.caption-medium {
+  font-family: $font-primary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $text-caption;
+}
+
+// Button Text
+.button-text {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $text-primary;
+}
+
+// Input Text
+.input-text {
+  font-family: $font-primary;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $text-primary;
+}
+

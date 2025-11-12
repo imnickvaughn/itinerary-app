@@ -1,0 +1,12 @@
+<label class="radio-button" (click)="onToggle()">
+  <input
+    type="radio"
+    [name]="name"
+    [value]="value"
+    [checked]="checked"
+    (change)="onToggle()"
+    class="radio-button__input"
+  />
+  <span class="radio-button__checkmark" [class.radio-button__checkmark--checked]="checked"></span>
+</label>
+
